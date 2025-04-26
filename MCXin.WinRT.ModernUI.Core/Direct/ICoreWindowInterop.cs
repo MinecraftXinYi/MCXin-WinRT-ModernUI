@@ -23,14 +23,14 @@ public partial interface ICoreWindowInterop
     /// <summary>
     /// 获取应用的 CoreWindow (HWND) 句柄。
     /// </summary>
-    /// <returns>CoreWindow 的窗口句柄</returns>
+    /// <returns>CoreWindow 的窗口句柄。</returns>
     /// <exception cref="COMException" />
     public nint GetWindowHandle();
 
     /// <summary>
     /// 设置是否已处理到 CoreWindow 的消息。
     /// </summary>
-    /// <param name="messageHandled">标志该消息是否已被处理</param>
+    /// <param name="messageHandled">标志该消息是否已被处理。</param>
     /// <exception cref="COMException" />
     public void SetMessageHandled([MarshalAs(UnmanagedType.Bool)] bool messageHandled);
 }
