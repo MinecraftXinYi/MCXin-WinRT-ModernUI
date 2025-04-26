@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFrameworks>net8.0-windows10.0.26100.0;net48</TargetFrameworks>
+		<TargetPlatformMinVersionBase>10.0.18362</TargetPlatformMinVersionBase>
+		<RootNamespace>MinecraftXinYi.Windows.ModernUI</RootNamespace>
+		<LangVersion>12.0</LangVersion>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<Nullable>enable</Nullable>
+		<CodeVersion>0.0.1</CodeVersion>
+		<ProductVersion>$(CodeVersion)</ProductVersion>
+		<AssemblyTitleBase>Windows ModernUI Desktop</AssemblyTitleBase>
+		<Company>MinecraftXinYi Person</Company>
+	</PropertyGroup>
+	<ItemGroup>
+	  <AdditionalFiles Include="NativeMethods.txt" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\MCXin.WinRT.ModernUI.Core\MCXin.WinRT.ModernUI.Core.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.Windows.CsWin32" Version="0.3.183">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	</ItemGroup>
+
+	<PropertyGroup Condition="$(TargetFramework) == 'net8.0-windows10.0.26100.0'">
+		<TargetPlatformMinVersion>$(TargetPlatformMinVersionBase).0</TargetPlatformMinVersion>
+		<UseUwp>true</UseUwp>
+		<UseUwpTools>false</UseUwpTools>
+		<IsAotCompatible>true</IsAotCompatible>
+		<BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+		<FileVersion>$(CodeVersion).2</FileVersion>
+		<AssemblyTitle>$(AssemblyTitleBase) (.NET Core)</AssemblyTitle>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(TargetFramework) == 'net48'">
+		<FileVersion>$(CodeVersion).3</FileVersion>
+		<AssemblyTitle>$(AssemblyTitleBase) (.NET Framework)</AssemblyTitle>
+	</PropertyGroup>
+
+</Project>
