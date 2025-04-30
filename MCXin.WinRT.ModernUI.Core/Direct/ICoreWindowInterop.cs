@@ -17,7 +17,7 @@ using MetaData;
 [ComImport]
 #endif
 [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-[Guid(WRTUICoreInterfaceGuid2.ICoreWindowInterop)]
+[Guid(WRTUICoreInterfaceGuid.ICoreWindowInterop)]
 public partial interface ICoreWindowInterop
 {
     /// <summary>

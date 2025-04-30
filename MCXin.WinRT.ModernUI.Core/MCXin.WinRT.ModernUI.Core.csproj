@@ -1,38 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-	  <Product>MCXinNET-WinRT-ModernUI</Product>
-	  <TargetFrameworks>net8.0-windows10.0.26100.0;net48</TargetFrameworks>
-	  <WindowsSdkVersionBase>10.0.26100</WindowsSdkVersionBase>
-	  <TargetPlatformMinVersionBase>10.0.18362</TargetPlatformMinVersionBase>
-	  <RootNamespace>MinecraftXinYi.Windows.ModernUI.Core</RootNamespace>
-	  <LangVersion>12.0</LangVersion>
-	  <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-	  <Nullable>enable</Nullable>
-	  <CodeVersion>0.0.1</CodeVersion>
-	  <ProductVersion>$(CodeVersion)</ProductVersion>
-	  <AssemblyTitleBase>MinecraftXinYi's .NET Toolkit for Windows WinRT UI</AssemblyTitleBase>
-	  <Company>MinecraftXinYi Person</Company>
-  </PropertyGroup>
-
-	<PropertyGroup Condition="$(TargetFramework) == 'net8.0-windows10.0.26100.0'">
-		<WindowsSdkPackageVersion>$(WindowsSdkVersionBase).57</WindowsSdkPackageVersion>
-		<TargetPlatformMinVersion>$(TargetPlatformMinVersionBase).0</TargetPlatformMinVersion>
+	<Import Project="..\MCXin.WinRT.ModernUI.Core.Common\MCXin.WinRT.ModernUI.ProjectConfig.props"/>
+	<Import Project="..\MCXin.WinRT.ModernUI.Core.Common\MCXin.WinRT.ModernUI.AssemblyInfo.props"/>
+	<PropertyGroup>
+		<TargetFramework>net8.0-windows10.0.26100.0</TargetFramework>
+		<RootNamespace>MinecraftXinYi.Windows.ModernUI.Core</RootNamespace>
 		<UseUwp>true</UseUwp>
 		<UseUwpTools>false</UseUwpTools>
 		<BuiltInComInteropSupport>true</BuiltInComInteropSupport>
-		<DisableRuntimeMarshalling>true</DisableRuntimeMarshalling>
 		<IsAotCompatible>true</IsAotCompatible>
-		<FileVersion>$(CodeVersion).2</FileVersion>
+	</PropertyGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\MCXin.WinRT.ModernUI.Core.Common\MCXin.WinRT.ModernUI.Core.Common.csproj" />
+	</ItemGroup>
+	<PropertyGroup>
+		<FileVersion>$(ProductVersion).2</FileVersion>
 		<AssemblyTitle>$(AssemblyTitleBase) (.NET Core)</AssemblyTitle>
 	</PropertyGroup>
-
-	<ItemGroup Condition="$(TargetFramework) == 'net48'">
-		<PackageReference Include="Microsoft.Windows.SDK.Contracts" Version="$(WindowsSdkVersionBase).1742" />
-	</ItemGroup>
-
-	<PropertyGroup Condition="$(TargetFramework) == 'net48'">
-		<FileVersion>$(CodeVersion).3</FileVersion>
-		<AssemblyTitle>$(AssemblyTitleBase) (.NET Framework)</AssemblyTitle>
-	</PropertyGroup>
-
 </Project>
