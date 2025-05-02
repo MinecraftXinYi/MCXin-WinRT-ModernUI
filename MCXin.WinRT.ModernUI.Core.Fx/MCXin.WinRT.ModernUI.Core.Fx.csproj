@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\MCXin.WinRT.ModernUI.Core.Common\MCXin.WinRT.ModernUI.ProjectConfig.props"/>
+	<Import Project="..\MCXin.WinRT.ModernUI.Core.Common\MCXin.WinRT.ModernUI.AssemblyInfo.props"/>
+	<PropertyGroup>
+		<TargetFramework>net462</TargetFramework>
+		<RootNamespace>MinecraftXinYi.Windows.ModernUI.Core</RootNamespace>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Windows.SDK.Contracts" Version="*" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\MCXin.WinRT.ModernUI.Core.Common\MCXin.WinRT.ModernUI.Core.Common.csproj" />
+	</ItemGroup>
+	<PropertyGroup>
+		<FileVersion>$(ProductVersion).3</FileVersion>
+		<AssemblyTitle>$(AssemblyTitleBase) (.NET Framework)</AssemblyTitle>
+	</PropertyGroup>
+</Project>

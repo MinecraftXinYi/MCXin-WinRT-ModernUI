@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Runtime.InteropServices;
-using System.Runtime.InteropServices.Marshalling;
 
 namespace MinecraftXinYi.Windows.ModernUI.Core.Direct;
 
@@ -9,7 +8,7 @@ using MetaData;
 /// <summary>
 /// 使应用能够 (与此接口关联的 CoreWindow) 获取窗口的窗口句柄。
 /// </summary>
-[GeneratedComInterface]
+[ComImport]
 [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
 [Guid(WRTUICoreInterfaceGuid.ICoreWindowInterop)]
 public partial interface ICoreWindowInterop

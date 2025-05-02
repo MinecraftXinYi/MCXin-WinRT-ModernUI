@@ -9,6 +9,7 @@ using Windows.Win32.UI.WindowsAndMessaging;
 using Windows.Win32.Graphics.Gdi;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Hosting;
+using WinRT;
 
 namespace MinecraftXinYi.Windows.ModernUI;
 
@@ -28,7 +29,7 @@ public partial class DesktopWindow
 
     private unsafe void InitWindowXamlSourceNative()
     {
-        windowXamlSourceNative = windowXamlSource.GetNative2();
+        windowXamlSourceNative = windowXamlSource.As<IDesktopWindowXamlSourceNative2>();
         windowXamlSourceNative.AttachToWindow(windowHandle);
         ResizeWindowToDesktopWindowXamlSourceWindowDimensions();
     }

@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Runtime.InteropServices;
-using System.Runtime.InteropServices.Marshalling;
 
 namespace MinecraftXinYi.Windows.ModernUI.Core;
 
 using MetaData;
 
-[GeneratedComInterface]
+[ComImport]
 [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
 [Guid(WRTUICoreInterfaceGuid.IWindowPrivate)]
 public partial interface IWindowPrivate

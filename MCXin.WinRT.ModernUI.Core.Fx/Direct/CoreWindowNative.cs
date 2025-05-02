@@ -7,8 +7,8 @@ using MetaData;
 
 public static partial class CoreWindowNative
 {
-    [LibraryImport(WRTUINativeLibraryName.WU, EntryPoint = WRTUINativeLibraryEntryPoint.DefaultEntryPoint, SetLastError = true)]
-    public static partial int PrivateCreateCoreWindow(
+    [DllImport(WRTUINativeLibraryName.WU, EntryPoint = WRTUINativeLibraryEntryPoint.DefaultEntryPoint, SetLastError = true)]
+    public static extern int PrivateCreateCoreWindow(
         CoreWindowType windowType,
         [MarshalAs(UnmanagedType.BStr)] string windowTitle,
         int x,

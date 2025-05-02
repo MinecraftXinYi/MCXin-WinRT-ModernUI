@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Runtime.InteropServices;
-using System.Runtime.InteropServices.Marshalling;
 
 namespace MinecraftXinYi.Windows.ModernUI.Core;
 
@@ -9,7 +8,7 @@ using MetaData;
 /// <summary>
 /// 提供可用于将承载 WinRT XAML 控件的 DesktopWindowXamlSource 对象附加到桌面应用中的父 UI 元素的成员。
 /// </summary>
-[GeneratedComInterface]
+[ComImport]
 [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
 [Guid(WRTUICoreInterfaceGuid.IDesktopWindowXamlSourceNative)]
 public partial interface IDesktopWindowXamlSourceNative
