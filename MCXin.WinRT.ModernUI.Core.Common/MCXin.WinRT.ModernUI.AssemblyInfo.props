@@ -1,10 +1,10 @@
 <Project>
-  <PropertyGroup>
-	  <Product>MCXinNET-WinRT-ModernUI</Product>
-	  <AssemblyTitleBase>MinecraftXinYi's .NET Toolkit for Windows WinRT UI</AssemblyTitleBase>
-	  <Company>MinecraftXinYi Person</Company>
-  </PropertyGroup>
 	<PropertyGroup>
-	  <ProductVersion>0.0.2</ProductVersion>
+		<Product>MCXinNET-WinRT-ModernUI</Product>
+		<AssemblyTitleBase>MinecraftXinYi's .NET Toolkit for Windows WinRT UI</AssemblyTitleBase>
+		<Company>MinecraftXinYi Person</Company>
+	</PropertyGroup>
+	<PropertyGroup>
+		<ProductVersion>0.0.2</ProductVersion>
 	</PropertyGroup>
 </Project>
