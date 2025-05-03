@@ -22,7 +22,6 @@
 	  </PackageReference>
 	</ItemGroup>
 	<PropertyGroup>
-		<FileVersion>$(ProductVersion).2</FileVersion>
 		<AssemblyTitle>$(AssemblyTitleBase) (.NET Core)</AssemblyTitle>
 	</PropertyGroup>
 </Project>

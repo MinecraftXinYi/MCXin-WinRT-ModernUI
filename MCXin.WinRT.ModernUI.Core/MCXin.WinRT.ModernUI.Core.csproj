@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<Import Project="..\MCXin.WinRT.ModernUI.Core.Common\MCXin.WinRT.ModernUI.ProjectConfig.props"/>
 	<Import Project="..\MCXin.WinRT.ModernUI.Core.Common\MCXin.WinRT.ModernUI.AssemblyInfo.props"/>
 	<PropertyGroup>
@@ -13,7 +13,6 @@
 	  <ProjectReference Include="..\MCXin.WinRT.ModernUI.Core.Common\MCXin.WinRT.ModernUI.Core.Common.csproj" />
 	</ItemGroup>
 	<PropertyGroup>
-		<FileVersion>$(ProductVersion).2</FileVersion>
 		<AssemblyTitle>$(AssemblyTitleBase) (.NET Core)</AssemblyTitle>
 	</PropertyGroup>
 </Project>

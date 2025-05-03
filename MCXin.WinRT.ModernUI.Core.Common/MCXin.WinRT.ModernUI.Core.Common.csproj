@@ -6,7 +6,6 @@
 		<RootNamespace>MinecraftXinYi.Windows.ModernUI.Core</RootNamespace>
 	</PropertyGroup>
 	<PropertyGroup>
-		<FileVersion>$(ProductVersion).1</FileVersion>
-		<AssemblyTitle>$(AssemblyTitleBase)</AssemblyTitle>
+		<AssemblyTitle>$(AssemblyTitleBase) (Common)</AssemblyTitle>
 	</PropertyGroup>
 </Project>

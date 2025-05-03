@@ -12,7 +12,6 @@
 		<ProjectReference Include="..\MCXin.WinRT.ModernUI.Core.Common\MCXin.WinRT.ModernUI.Core.Common.csproj" />
 	</ItemGroup>
 	<PropertyGroup>
-		<FileVersion>$(ProductVersion).3</FileVersion>
 		<AssemblyTitle>$(AssemblyTitleBase) (.NET Framework)</AssemblyTitle>
 	</PropertyGroup>
 </Project>

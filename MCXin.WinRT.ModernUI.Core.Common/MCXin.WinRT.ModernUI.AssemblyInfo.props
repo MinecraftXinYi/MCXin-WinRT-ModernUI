@@ -5,6 +5,7 @@
 		<Company>MinecraftXinYi Person</Company>
 	</PropertyGroup>
 	<PropertyGroup>
-		<ProductVersion>0.0.2</ProductVersion>
+		<ProductVersion>0.0.2.1</ProductVersion>
+		<FileVersion>$(ProductVersion)</FileVersion>
 	</PropertyGroup>
 </Project>
