@@ -7,10 +7,10 @@ using MetaData;
 
 public static partial class CoreWindowNative
 {
-    [LibraryImport(WRTUINativeLibraryName.WU, EntryPoint = WRTUINativeLibraryEntryPoint.DefaultEntryPoint, SetLastError = true)]
+    [LibraryImport(WinRTUILibraryName.WU, EntryPoint = "#1500", StringMarshalling = StringMarshalling.Utf16)]
     public static partial int PrivateCreateCoreWindow(
         CoreWindowType windowType,
-        [MarshalAs(UnmanagedType.BStr)] string windowTitle,
+        string windowTitle,
         int x,
         int y,
         uint width,

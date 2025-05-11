@@ -14,6 +14,7 @@ using WinRT;
 namespace MinecraftXinYi.Windows.ModernUI;
 
 using Core;
+using System.Diagnostics;
 
 /// <summary>
 /// Represents a system-managed container for the content of an app.
@@ -134,7 +135,7 @@ public partial class DesktopWindow
             case PInvoke.WM_PAINT:
                 HDC hdc = PInvoke.BeginPaint(hWnd, out PAINTSTRUCT ps);
                 _ = PInvoke.GetClientRect(hWnd, out RECT rect);
-                _ = PInvoke.FillRect(hdc, rect, new DefaultSafeHandle(PInvoke.GetStockObject(GET_STOCK_OBJECT_FLAGS.WHITE_BRUSH)));
+                _ = PInvoke.FillRect(hdc, &rect, (HBRUSH)(void*)PInvoke.GetStockObject(GET_STOCK_OBJECT_FLAGS.WHITE_BRUSH));
                 _ = PInvoke.EndPaint(hWnd, ps);
                 return new LRESULT();
             case PInvoke.WM_CLOSE when windowIsClosed:
@@ -172,6 +173,8 @@ public partial class DesktopWindow
         {
             try
             {
+                HighDPISupport.EnableModernHighDPIScalingForThread();
+                Debug.WriteLine(HighDPISupport.IsModernHighDPIScalingEnabledForThread());
                 DesktopWindow window = new();
 
                 taskCompletionSource.SetResult(window);

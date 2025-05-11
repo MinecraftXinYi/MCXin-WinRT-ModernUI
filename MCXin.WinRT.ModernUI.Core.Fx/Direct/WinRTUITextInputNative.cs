@@ -4,8 +4,8 @@ namespace MinecraftXinYi.Windows.ModernUI.Core.Direct;
 
 using MetaData;
 
-public static partial class WRTUITextInputNative
+public static partial class WinRTUITextInputNative
 {
-    [DllImport(WRTUINativeLibraryName.WUCTI, EntryPoint = WRTUINativeLibraryEntryPoint.DefaultEntryPoint)]
+    [DllImport(WinRTUILibraryName.WUCTI, EntryPoint = "#1500")]
     public static extern int CreateTextInputProducer(nint consumer, out nint pProducer);
 }

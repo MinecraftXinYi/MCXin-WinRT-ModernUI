@@ -7,7 +7,7 @@ using MetaData;
 
 [ComImport]
 [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-[Guid(WRTUICoreInterfaceGuid.IWindowPrivate)]
+[Guid(WinRTUICoreInterfaceGuid.IWindowPrivate)]
 public partial interface IWindowPrivate
 {
     /// <summary>

@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	<Import Project="..\MCXin.WinRT.ModernUI.Core.Common\MCXin.WinRT.ModernUI.ProjectConfig.props"/>
-	<Import Project="..\MCXin.WinRT.ModernUI.Core.Common\MCXin.WinRT.ModernUI.AssemblyInfo.props"/>
+	<Import Project="..\MCXin.WinRT.ModernUI.Core.Common\MCXin.WinRT.ModernUI.ProjectConfig.props" />
+	<Import Project="..\MCXin.WinRT.ModernUI.Core.Common\MCXin.WinRT.ModernUI.AssemblyInfo.props" />
 	<PropertyGroup>
 		<TargetFramework>net8.0-windows10.0.26100.0</TargetFramework>
 		<RootNamespace>MinecraftXinYi.Windows.ModernUI</RootNamespace>
@@ -10,6 +10,7 @@
 		<IsAotCompatible>true</IsAotCompatible>
 	</PropertyGroup>
 	<ItemGroup>
+	  <ProjectReference Include="..\MCXin.WinRT.ModernUI.Common\MCXin.WinRT.ModernUI.Common.csproj" />
 	  <ProjectReference Include="..\MCXin.WinRT.ModernUI.Core\MCXin.WinRT.ModernUI.Core.csproj" />
 	</ItemGroup>
 	<ItemGroup>

@@ -11,7 +11,7 @@ using MetaData;
 /// </summary>
 [GeneratedComInterface]
 [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-[Guid(WRTUICoreInterfaceGuid.ICoreWindowInterop)]
+[Guid(WinRTUICoreInterfaceGuid.ICoreWindowInterop)]
 public partial interface ICoreWindowInterop
 {
     /// <summary>

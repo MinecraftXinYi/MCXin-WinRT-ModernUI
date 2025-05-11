@@ -11,7 +11,7 @@ using MetaData;
 /// </summary>
 [ComImport]
 [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-[Guid(WRTUICoreInterfaceGuid.IDesktopWindowXamlSourceNative2)]
+[Guid(WinRTUICoreInterfaceGuid.IDesktopWindowXamlSourceNative2)]
 public partial interface IDesktopWindowXamlSourceNative2 : IDesktopWindowXamlSourceNative
 {
     /// <summary>

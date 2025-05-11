@@ -1,6 +1,9 @@
 ﻿namespace MinecraftXinYi.Windows.ModernUI.Core.MetaData;
 
-public static partial class WRTUICoreInterfaceGuid
+/// <summary>
+/// 存储实现 UWP Xaml (CoreWindow) Host 所需要的 COM 接口 Guid
+/// </summary>
+public static partial class WinRTUICoreInterfaceGuid
 {
     public const string
         IDesktopWindowXamlSourceNative = "3CBCF1BF-2F76-4E9C-96AB-E84B37972554",

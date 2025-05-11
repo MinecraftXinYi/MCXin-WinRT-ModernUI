@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCXin.WinRT.ModernUI.Core.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCXin.WinRT.ModernUI.Core.Fx", "MCXin.WinRT.ModernUI.Core.Fx\MCXin.WinRT.ModernUI.Core.Fx.csproj", "{A328A7F4-8C2A-43F6-B40D-4A909B6B52AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCXin.WinRT.ModernUI.Common", "MCXin.WinRT.ModernUI.Common\MCXin.WinRT.ModernUI.Common.csproj", "{D3E7F462-789F-41D5-A31F-8085D36062EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{A328A7F4-8C2A-43F6-B40D-4A909B6B52AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A328A7F4-8C2A-43F6-B40D-4A909B6B52AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A328A7F4-8C2A-43F6-B40D-4A909B6B52AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3E7F462-789F-41D5-A31F-8085D36062EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3E7F462-789F-41D5-A31F-8085D36062EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3E7F462-789F-41D5-A31F-8085D36062EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3E7F462-789F-41D5-A31F-8085D36062EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

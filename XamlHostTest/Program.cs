@@ -5,7 +5,7 @@ using WinRT;
 using XamlIslandsTest;
 using MinecraftXinYi.Windows.ModernUI;
 
-namespace XamlIslandsTestProg;
+namespace XamlHostTest;
 
 public static class Program
 {
@@ -13,10 +13,10 @@ public static class Program
     {
         if (AppxEnvironment.IsAppx && AppxEnvironment.IsCoreApplication)
         {
-            global::Windows.UI.Xaml.Application.Start((p) =>
+            Windows.UI.Xaml.Application.Start((p) =>
             {
-                var context = new global::Windows.System.DispatcherQueueSynchronizationContext(global::Windows.System.DispatcherQueue.GetForCurrentThread());
-                global::System.Threading.SynchronizationContext.SetSynchronizationContext(context);
+                var context = new Windows.System.DispatcherQueueSynchronizationContext(Windows.System.DispatcherQueue.GetForCurrentThread());
+                System.Threading.SynchronizationContext.SetSynchronizationContext(context);
                 new App(true);
             });
         }

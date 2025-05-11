@@ -8,7 +8,7 @@ using MetaData;
 
 [GeneratedComInterface]
 [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-[Guid(WRTUICoreInterfaceGuid.IWindowPrivate)]
+[Guid(WinRTUICoreInterfaceGuid.IWindowPrivate)]
 public partial interface IWindowPrivate
 {
     /// <summary>

@@ -38,3 +38,5 @@ SendMessage
 SetWindowPos
 SetWindowText
 ShowWindow
+
+GetMessage
