@@ -1,0 +1,10 @@
+namespace MinecraftXinYi.Windows.ModernUI.Core
+{
+	[version(1.0)]
+	[uuid(CD292360-2763-4085-8A9F-74B224A29175)]
+	interface ICoreWindowFactory : IInspectable
+	{
+		HRESULT CreateCoreWindow(HSTRING windowTitle,[out][retval] Windows.UI.Core.CoreWindow** window);
+		[propget] HRESULT WindowReuseAllowed([out][retval] boolean* value);
+	};
+}

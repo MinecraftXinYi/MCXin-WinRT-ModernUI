@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	<Import Project="..\MCXin.WinRT.ModernUI.Core.Common\MCXin.WinRT.ModernUI.ProjectConfig.props"/>
-	<Import Project="..\MCXin.WinRT.ModernUI.Core.Common\MCXin.WinRT.ModernUI.AssemblyInfo.props"/>
+	<Import Project="..\MCXin.WinRT.ModernUI.Core.Common\MCXin.WinRT.ModernUI.ProjectConfig.props" />
+	<Import Project="..\MCXin.WinRT.ModernUI.Core.Common\MCXin.WinRT.ModernUI.AssemblyInfo.props" />
 	<PropertyGroup>
 		<TargetFramework>net8.0-windows10.0.26100.0</TargetFramework>
 		<RootNamespace>MinecraftXinYi.Windows.ModernUI.Core</RootNamespace>
@@ -10,8 +10,17 @@
 		<IsAotCompatible>true</IsAotCompatible>
 	</PropertyGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\MCXin.WinRT.ModernUI.Core.Common\MCXin.WinRT.ModernUI.Core.Common.csproj" />
+	  <PackageReference Include="Microsoft.Windows.CsWinRT" Version="2.2.0" />
 	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\MCXin.WinRT.ModernUI.Core.Common\MCXin.WinRT.ModernUI.Core.Common.csproj" />
+		<Reference Include="MCXin.WinRT.ModernUI.Core.WinRTCommon" HintPath="..\MCXin.WinRT.ModernUI.Core.WinRTCommon\WinMD\$(RootNamespace).winmd" IsWinMDFile="true" />
+	</ItemGroup>
+	<PropertyGroup>
+		<CsWinRTIncludes>
+			$(RootNamespace)
+		</CsWinRTIncludes>
+	</PropertyGroup>
 	<PropertyGroup>
 		<AssemblyTitle>$(AssemblyTitleBase) (.NET Core)</AssemblyTitle>
 	</PropertyGroup>

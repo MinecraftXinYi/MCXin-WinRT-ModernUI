@@ -10,11 +10,13 @@ using Windows.Win32.Graphics.Gdi;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Hosting;
 using WinRT;
+using System.Diagnostics;
 
 namespace MinecraftXinYi.Windows.ModernUI;
 
 using Core;
-using System.Diagnostics;
+using Core.Direct;
+using System.Runtime.InteropServices;
 
 /// <summary>
 /// Represents a system-managed container for the content of an app.
@@ -22,7 +24,10 @@ using System.Diagnostics;
 public partial class DesktopWindow
 {
     private readonly DesktopWindowXamlSource windowXamlSource = new();
-    private IDesktopWindowXamlSourceNative2 windowXamlSourceNative;
+    private IDesktopWindowXamlSourceNative2 windowXamlSourceNative
+    {
+        get => windowXamlSource.As<IDesktopWindowXamlSourceNative2>();
+    }
 
     private readonly HWND windowHandle;
     private readonly WNDCLASSEXW windowClassEx;
@@ -30,9 +35,14 @@ public partial class DesktopWindow
 
     private unsafe void InitWindowXamlSourceNative()
     {
-        windowXamlSourceNative = windowXamlSource.As<IDesktopWindowXamlSourceNative2>();
         windowXamlSourceNative.AttachToWindow(windowHandle);
         ResizeWindowToDesktopWindowXamlSourceWindowDimensions();
+        CoreWindow coreWindow = CoreWindow.GetForCurrentThread();
+        ITextInputConsumer textInputConsumer = coreWindow.As<ITextInputConsumer>();
+        nint pConsumer = MarshalInterface<ITextInputConsumer>.FromManaged(textInputConsumer);
+        WinRTUITextInputNative.CreateTextInputProducer(pConsumer, out nint pProducer);
+        ITextInputProducer textInputProducer = MarshalInterface<ITextInputProducer>.FromAbi(pProducer);
+        textInputConsumer.TextInputProducer = textInputProducer;
     }
 
     private void ResizeWindowToDesktopWindowXamlSourceWindowDimensions()
@@ -151,6 +161,9 @@ public partial class DesktopWindow
             case PInvoke.WM_CREATE:
                 Win32ImmersiveThemeSupport.EnableWin32DarkModeForWindow(hWnd, true);
                 return new LRESULT();
+            case PInvoke.WM_ACTIVATE:
+                PInvoke.SetFocus(new(windowXamlSourceNative.GetWindowHandle()));
+                return new LRESULT();
             case PInvoke.WM_DESTROY:
                 PInvoke.PostQuitMessage(0);
                 return new LRESULT();
@@ -186,7 +199,7 @@ public partial class DesktopWindow
                     Thread.Sleep(1);
                     if (PInvoke.PeekMessage(out msg, new HWND(), 0, 0, PEEK_MESSAGE_REMOVE_TYPE.PM_REMOVE))
                     {
-                        window.windowXamlSourceNative?.PreTranslateMessage(&msg);
+                        window.windowXamlSourceNative.PreTranslateMessage(&msg);
                         _ = PInvoke.DispatchMessage(msg);
                     }
                 }

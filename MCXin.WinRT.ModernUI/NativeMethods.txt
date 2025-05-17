@@ -13,6 +13,7 @@ WM_PAINT
 WM_QUIT
 WM_SETICON
 WM_SIZE
+WM_ACTIVATE
 
 BeginPaint
 CallNextHookEx
@@ -38,5 +39,4 @@ SendMessage
 SetWindowPos
 SetWindowText
 ShowWindow
-
-GetMessage
+SetFocus

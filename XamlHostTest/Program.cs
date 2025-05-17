@@ -24,7 +24,6 @@ public static class Program
         {
             ComWrappersSupport.InitializeComWrappers();
             App app = new(false);
-            WindowsXamlManager xamlManager = WindowsXamlManager.InitializeForCurrentThread();
             DesktopWindow desktopWindow = await DesktopWindow.CreateAsync();
             desktopWindow.Content = new MainPage();
             desktopWindow.Show();
