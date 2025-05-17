@@ -145,7 +145,7 @@ public partial class DesktopWindow
                 Closed?.Invoke(this, null!);
                 goto default;
             case PInvoke.WM_SIZE:
-                Debug.WriteLine(HighDPISupport.GetWindowDpi(hWnd));
+                Debug.WriteLine(HighDPISupport.GetScalingFactorForWindow(hWnd));
                 ResizeWindowToDesktopWindowXamlSourceWindowDimensions();
                 return new LRESULT();
             case PInvoke.WM_CREATE:

@@ -11,6 +11,8 @@ public static class HighDPISupport
 {
     internal static class NativeInterop
     {
+        internal const byte USER_DEFAULT_SCREEN_DPI = 96;
+
         internal const nint DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2 = -4;
         internal const nint DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2_RET = 34;
 
@@ -43,10 +45,10 @@ public static class HighDPISupport
     }
 
     /// <summary>
-    /// 返回指定窗口的每英寸点数 (dpi) 值。
+    /// 返回指定窗口的缩放因子值。
     /// </summary>
-    /// <param name="hwnd">要获取其相关信息的窗口。</param>
-    /// <returns>窗口的 DPI，取决于窗口 DPI_AWARENESS 。</returns>
-    public static uint GetWindowDpi(nint hwnd)
-        => NativeInterop.GetDpiForWindow(hwnd);
+    /// <param name="hWnd">要获取其相关信息的窗口。</param>
+    /// <returns>窗口的缩放因子值，取决于窗口 DPI_AWARENESS 。</returns>
+    public static float GetScalingFactorForWindow(nint hWnd)
+        => (float)NativeInterop.GetDpiForWindow(hWnd) / NativeInterop.USER_DEFAULT_SCREEN_DPI;
 }
