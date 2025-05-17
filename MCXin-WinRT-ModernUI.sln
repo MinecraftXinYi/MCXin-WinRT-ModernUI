@@ -16,6 +16,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCXin.WinRT.ModernUI.Core.F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCXin.WinRT.ModernUI.Common", "MCXin.WinRT.ModernUI.Common\MCXin.WinRT.ModernUI.Common.csproj", "{D3E7F462-789F-41D5-A31F-8085D36062EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WRTMUITestDPI00", "Test\WRTMUITestDPI00\WRTMUITestDPI00.csproj", "{3B054E34-F38E-4397-9677-56C6DBE5130D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,9 +56,16 @@ Global
 		{D3E7F462-789F-41D5-A31F-8085D36062EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3E7F462-789F-41D5-A31F-8085D36062EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3E7F462-789F-41D5-A31F-8085D36062EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B054E34-F38E-4397-9677-56C6DBE5130D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B054E34-F38E-4397-9677-56C6DBE5130D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B054E34-F38E-4397-9677-56C6DBE5130D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B054E34-F38E-4397-9677-56C6DBE5130D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3B054E34-F38E-4397-9677-56C6DBE5130D} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F4710816-377E-4C98-8F03-659BF6A89263}

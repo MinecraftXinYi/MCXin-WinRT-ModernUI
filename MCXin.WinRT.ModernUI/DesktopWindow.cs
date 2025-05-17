@@ -149,6 +149,7 @@ public partial class DesktopWindow
                 ResizeWindowToDesktopWindowXamlSourceWindowDimensions();
                 return new LRESULT();
             case PInvoke.WM_CREATE:
+                Win32ImmersiveThemeSupport.EnableWin32DarkModeForWindow(hWnd, true);
                 return new LRESULT();
             case PInvoke.WM_DESTROY:
                 PInvoke.PostQuitMessage(0);
