@@ -145,6 +145,7 @@ public partial class DesktopWindow
                 Closed?.Invoke(this, null!);
                 goto default;
             case PInvoke.WM_SIZE:
+                Debug.WriteLine(HighDPISupport.GetWindowDpi(hWnd));
                 ResizeWindowToDesktopWindowXamlSourceWindowDimensions();
                 return new LRESULT();
             case PInvoke.WM_CREATE:
@@ -173,8 +174,7 @@ public partial class DesktopWindow
         {
             try
             {
-                HighDPISupport.EnableModernHighDPIScalingForThread();
-                Debug.WriteLine(HighDPISupport.IsModernHighDPIScalingEnabledForThread());
+                Debug.WriteLine(HighDPISupport.EnableModernHighDPIScalingForThread());
                 DesktopWindow window = new();
 
                 taskCompletionSource.SetResult(window);
@@ -182,6 +182,7 @@ public partial class DesktopWindow
                 MSG msg = new();
                 while (msg.message != PInvoke.WM_QUIT)
                 {
+                    Thread.Sleep(1);
                     if (PInvoke.PeekMessage(out msg, new HWND(), 0, 0, PEEK_MESSAGE_REMOVE_TYPE.PM_REMOVE))
                     {
                         window.windowXamlSourceNative?.PreTranslateMessage(&msg);

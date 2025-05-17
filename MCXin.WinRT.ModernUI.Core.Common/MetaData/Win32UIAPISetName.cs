@@ -6,8 +6,7 @@
 public static partial class Win32UIAPISetName
 {
     public const string
-        ExtMsWinRTCoreNtUserDPIL120 = "ext-ms-win-rtcore-ntuser-dpi-l1-2-0",
-        ExtMsWinNtUserWindowL115 = "ext-ms-win-ntuser-window-l1-1-5";
+        ExtMsWinRTCoreNtUserDPIL120 = "ext-ms-win-rtcore-ntuser-dpi-l1-2-0";
 
     public const string
         UXTheme = "uxtheme.dll";

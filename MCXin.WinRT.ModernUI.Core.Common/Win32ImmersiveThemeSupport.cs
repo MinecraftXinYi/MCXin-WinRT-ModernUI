@@ -14,9 +14,11 @@ public static class Win32ImmersiveThemeSupport
         public static extern int AllowDarkModeForWindow(IntPtr hWnd, int allow);
 
         [DllImport(Win32UIAPISetName.UXTheme, EntryPoint = "#104")]
+        [DefaultDllImportSearchPaths(DllImportSearchPath.System32)]
         public static extern void RefreshImmersiveColorPolicyState();
 
         [DllImport(Win32UIAPISetName.UXTheme, EntryPoint = "#136")]
+        [DefaultDllImportSearchPaths(DllImportSearchPath.System32)]
         public static extern void FlushMenuThemes();
     }
 }
